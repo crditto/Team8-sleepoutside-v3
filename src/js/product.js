@@ -8,6 +8,7 @@ function addProductToCart(product) {
 async function addToCartHandler(e) {
   const product = await findProductById(e.target.dataset.id);
   addProductToCart(product);
+
 }
 
 // add listener to Add to Cart button
