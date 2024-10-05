@@ -3,7 +3,7 @@ import { findProductById } from "./productData.mjs";
 import { getParam } from "./utils.mjs"
 
 const productId = getParam("product");
-console.log(findProductById));
+console.log(findProductById);
 
 function addProductToCart(product) {
   let cart = JSON.parse(localStorage.getItem("so-cart"));
