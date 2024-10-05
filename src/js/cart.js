@@ -1,7 +1,8 @@
 import { getLocalStorage } from "./utils.mjs";
 
 function renderCartContents() {
-  const cartItems = getLocalStorage("so-cart");
+  // checking if cartItems is null, and if so, initialize it to an empty array
+  const cartItems = getLocalStorage("so-cart"); 
   const htmlItems = cartItems.map((item) => cartItemTemplate(item));
   document.querySelector(".product-list").innerHTML = htmlItems.join("");
 }
