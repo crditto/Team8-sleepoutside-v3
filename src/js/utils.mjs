@@ -12,11 +12,6 @@ export function getLocalStorage(key) {
 }
 // save data to local storage
 export function setLocalStorage(key, data) {
-
-  if (!Array.isArray(data)) {
-    data = [data]; // Wrapping data in an array so the .map function works in the renderCartContents function
-  }
-
   localStorage.setItem(key, JSON.stringify(data));
 }
 
