@@ -1,7 +1,7 @@
 import { getData } from "./productData.mjs";
 import { renderListWithTemplate } from "./utils.mjs";
 
-const requiredProductIds = ["344YJ", "880RR", "985PR", "985RF", "1308"];
+const requiredProductIds = ["344YJ", "880RR", "985PR", "985RF", "989CG"];
 
 export function filterProducts(products) {
   return products.filter((product) => requiredProductIds.includes(product.Id));
