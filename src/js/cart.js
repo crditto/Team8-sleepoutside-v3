@@ -1,4 +1,11 @@
 import { getLocalStorage } from "./utils.mjs";
+import { loadHeaderFooter } from './utils';
+
+async function initCheckout() {
+    await loadHeaderFooter();
+}
+
+initCheckout();
 
 function renderCartContents() {
   const cartItems = getLocalStorage("so-cart");
