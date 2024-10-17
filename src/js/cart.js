@@ -1,5 +1,5 @@
 import { getLocalStorage } from "./utils.mjs";
-import { loadHeaderFooter } from './utils';
+import { loadHeaderFooter } from "./utils";
 
 async function initCheckout() {
     await loadHeaderFooter();
