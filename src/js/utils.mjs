@@ -56,19 +56,19 @@ export async function renderWithTemplate(
   }
   const htmlString = await templateFn(data);
   parentElement.insertAdjacentHTML(position, htmlString);
-  if(callback) {
+  if (callback) {
     callback(data);
   }
 }
 
 export function loadTemplate(path) {
   return async function () {
-      const res = await fetch(path);
-      if (res.ok) {
+    const res = await fetch(path);
+    if (res.ok) {
       const html = await res.text();
       return html;
-      }
-    };
+    }
+  };
 }
 
 export async function loadHeaderFooter() {
@@ -78,14 +78,15 @@ export async function loadHeaderFooter() {
 
   // Grab header and footer elements from the DOM
   const headerEl = document.querySelector("#main-header");
+  console.log(headerEl);
   const footerEl = document.querySelector("#main-footer");
 
   // Render the header and footer
   if (headerEl) {
     await renderWithTemplate(headerTemplateFn, headerEl);
-}
+  }
 
-if (footerEl) {
+  if (footerEl) {
     await renderWithTemplate(footerTemplateFn, footerEl);
-}
+  }
 }
