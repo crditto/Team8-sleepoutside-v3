@@ -109,6 +109,9 @@ button {
 .cart:hover svg {
   fill: gray;
 }
+.cart-footer {
+  padding-left: 20px;
+}
 
 /* End cart icon styles */
 
@@ -252,4 +255,35 @@ footer {
 }
 .product-grid a:hover {
   text-decoration: underline;
+}
+
+.hide{
+  display: none;
+}
+.cart-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.checkout-button {
+  text-decoration: none;
+  color:var(--light-color)
+  }
+
+.checkout-form{
+  max-width: 500px;
+}
+fieldset{
+  margin-bottom: 1rem;
+}
+label{
+  display: block;
+  padding-top: 1rem;
+}
+input{
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: .5rem;
 }
