@@ -78,7 +78,6 @@ export async function loadHeaderFooter() {
 
   // Grab header and footer elements from the DOM
   const headerEl = document.querySelector("#main-header");
-  console.log(headerEl);
   const footerEl = document.querySelector("#main-footer");
 
   // Render the header and footer

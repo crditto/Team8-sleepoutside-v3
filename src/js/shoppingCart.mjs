@@ -2,8 +2,31 @@ import { getLocalStorage, renderListWithTemplate } from "./utils.mjs";
 
 export default function ShoppingCart() {
   const cartItems = getLocalStorage("so-cart");
+
+  if (!cartItems) {
+    return;
+  }
+
+  const total = calculateTotal(cartItems);
+
+  displayCartTotal(total);
+
   const outputEl = document.querySelector(".product-list");
   renderListWithTemplate(cartItemTemplate, outputEl, cartItems);
+}
+
+function calculateTotal(cartItems) {
+  const amounts = cartItems.map((item) => item.FinalPrice);
+  const total = amounts.reduce((a, b) => a + b, 0);
+  return total;
+}
+function displayCartTotal(total) {
+  if (total > 0) {
+    document.querySelector(".cart-footer").classList.remove("hide");
+    document.querySelector(".cart-total").innerHTML += `$${total}`;
+  } else {
+    document.querySelector(".cart-footer").classList.add("hide");
+  }
 }
 
 function cartItemTemplate(item) {
