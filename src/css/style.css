@@ -85,7 +85,6 @@ button {
   padding: 0.5em 2em;
   background-color: var(--secondary-color);
   color: white;
-  margin: auto;
   display: block;
   border: 0;
   font-size: var(--large-font);
@@ -127,7 +126,7 @@ button {
 }
 .product-list {
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   list-style-type: none;
   padding: 0;
@@ -271,7 +270,7 @@ footer {
   color:var(--light-color)
   }
 
-.checkout-form{
+.checkout-form, form{
   max-width: 500px;
 }
 fieldset{
@@ -290,4 +289,18 @@ input{
 
 .hide{
   display: none;
+}
+/*login*/
+.loginForm{
+  margin:2rem auto;
+}
+.loginButton{
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.loginButton:hover{
+  background-color: var(--light-grey);
+  color:var(--dark-grey);
+  
 }
