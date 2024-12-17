@@ -1,5 +1,5 @@
 import productList from "./productList.mjs";
-import { getParam, loadHeaderFooter } from "./utils";
+import { getParam, loadHeaderFooter } from "./utils.mjs";
 
 async function init() {
   await loadHeaderFooter();
