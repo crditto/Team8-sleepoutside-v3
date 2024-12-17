@@ -17,7 +17,7 @@ export default function ShoppingCart() {
 
 function calculateTotal(cartItems) {
   const amounts = cartItems.map((item) => item.FinalPrice);
-  const total = amounts.reduce((a, b) => a + b, 0);
+  const total = amounts.reduce((a, b) => a + b, 0).toFixed(2);
   return total;
 }
 function displayCartTotal(total) {
