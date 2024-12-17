@@ -11,7 +11,17 @@ export default async function productDetails(productId) {
   // once the HTML is rendered we can add a listener to Add to Cart button
   document.getElementById("addToCart").addEventListener("click", addToCart);
 }
+
 function addToCart() {
+  console.log("hola");
+  const cart_element = document.querySelector("#cart-icon");
+
+  cart_element.classList.add("animate");
+
+  setTimeout(() => {
+    cart_element.classList.remove("animate");
+  }, 1000);
+
   let cart = getLocalStorage("so-cart");
   if (!cart) {
     cart = []; //initializing it as an empty array if null
